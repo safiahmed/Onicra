@@ -25,6 +25,9 @@ $(document).ready(function() {
     })
 //    edit and update code ends here
 
+
+
+
 })
 
 //this function to calculate values of both source and application of funds
@@ -86,11 +89,12 @@ function calculatevalues() {
     var t2last = subtotal2  //this()subtotal is coming from previous .each function 
     var IR = t1last - t2last
     var FR = IR * 100
-    var FO = FR / t1last
+    var FI = FR / t1last
+    var FO = FI.toFixed(2);
     if (FO > 0) {
         $(".interest-rate p").text(FO + "%")
     } else {
-        $(".interest-rate p").text(FO + "%")
+        $(".interest-rate p").text("-"+FO + "%")
     }
     //    calculation of interest rate s ends here
 }

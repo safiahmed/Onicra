@@ -44,18 +44,18 @@
 .interest-rate{
     padding: 11px;
     background-color: #44A0F3;
-    height: 98px;
-    width: 277px;
+    height: 123px;
+    width: 293px;
     color: #ffffff;
     border-radius: 4px;
 }
 .interest-rate span{
-    font-size: 21px;
+    font-size: 23px;
     padding: 11px;
 }
 .interest-rate p{
-    font-size: 19px;
-    padding: 11px;
+    font-size: 48px;
+    padding: 5px;
 }
 .interest-rate hr{
     margin-top: 0;
@@ -63,17 +63,20 @@
 }
 
 .third-container{
-    padding: 16px;
+    padding: 24px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin-top: -13px;
+    margin-top: 21px;
     margin-bottom: 7px;
+    height: auto;
 }
 
 .info{
     color: red;
     float: right;
-    margin-top: -4px;
+    margin-top: -13px;
+    margin-bottom: 7px;
+    font-weight: bold;
 }
 
 .foutstyle{
