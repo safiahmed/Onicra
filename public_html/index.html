@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">        
+        <link href="style/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
+        <link href="style/style.css" rel="stylesheet" type="text/css" />
+
+        <script src="js/Chart.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <style>
+            .foutstyle{
+                width: 45px;
+                border-radius: 3px;
+                border-color: skyblue;
+                height: 30px;
+                background-color: #39BCE7;
+                color: #ffffff;
+                font-weight: bold;
+            }
+
+        </style>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+    <body>
+        <section id="mainContainer">
+            <!--top navigation menu starts-->
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Onicra</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="images/logo.jpg" />
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Mail</a></li>
+                            <li><a href="#">Web</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">John Doe <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+            <!--top navigation menu ends here-->
+
+            <!--left&right section combine starts-->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active">
+                            <img src="images/dashboard_icon.png" />
+                            Dashboard
+                            <img src="images/arrow_right.png" style="float: right;" />
+                        </a>
+                        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                        <a href="#" class="list-group-item">Morbi leo risus</a>
+                        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                        <a href="#" class="list-group-item">Vestibulum at eros</a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h4>Fund Planner</h4>
+                    <div class="right-horizontal-line"></div>
+                    <section class="data-tables">
+                        <div class="left-data-table">
+                            <p>
+                                <img src="images/resource_of_fund_icon.png" />
+                                Source of fund( funds and amounts are in thousands )</p>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table1">
+                                    <thead>
+                                        <tr>
+                                            <th>Sources</th>
+                                            <th>Fund</th>
+                                            <th>Interest Rate</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Term Loan</td>
+                                            <td>65</td>
+                                            <td>12%</td>
+                                            <td>42</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Owners Equity</td>
+                                            <td>70</td>
+                                            <td>15%</td>
+                                            <td>30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Working Capital</td>
+                                            <td>90</td>
+                                            <td>16.5%</td>
+                                            <td>6.6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Over Draft</td>
+                                            <td>30</td>
+                                            <td>13%</td>
+                                            <td>13</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Inventory Funding</td>
+                                            <td>80</td>
+                                            <td>12%</td>
+                                            <td>24</td>
+                                        </tr>
+                                        <tr class="selected-row">
+                                            <td>Cash Credit</td>
+                                            <td>60</td>
+                                            <td>14.5%</td>
+                                            <td>43.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Other Short Term Finances(creditors)</td>
+                                            <td>50</td>
+                                            <td>13%</td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>1200</td>
+                                            <td></td>
+                                            <td>159</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div><!-- /.table-responsive -->
+                            <span class="info">please click on number to edit</span>
+                        </div>
+                        <div class="right-data-table">
+                            <p>
+                                <img src="images/application_of_fund_icon.png" />
+                                Application of fund( funds and amounts are in thousands )
+                            </p>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table2">
+                                    <thead>
+                                        <tr>
+                                            <th>Sources</th>
+                                            <th>Fund</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Fixed Assets</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Investments</td>
+                                            <td>70</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Receivables</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Inventory help-up cost</td>
+                                            <td>30</td>
+                                        </tr>
+                                        <tr class="selected-row">
+                                            <td>Cash in Hand</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cash in Bank</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Other Assets (like loan to promoters)</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>1000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div><!-- /.table-responsive -->
+                        </div>
+                        <div class="clear"></div>
+                        <section class="chart-section">
+                            <div class="left-data-table chart-division">
+                                <canvas id="canvas" height="380" width="458"></canvas>
+                            </div>
+                            <div class="right-data-table chart-division">
+                                <canvas id="canvas-second" height="380" width="458"></canvas>
+                            </div>
+                        </section>
+                        <div class="clear"></div>
+                        <section>
+                            <div class="left-data-table third-container">
+                                <div class="interest-rate">
+                                    <span>IMPACTS ON MARGIN</span>
+                                    <hr>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

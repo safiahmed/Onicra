@@ -1,0 +1,165 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#mainContainer{
+    width: 1200px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.right-horizontal-line{
+    width: 98.3%;
+    background-color: #b2bbc5;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 2px;
+    margin-left: 11px;
+    margin-bottom: 15px
+}
+
+.data-tables{
+    width: 100%;
+    height: auto;
+}
+
+.col-md-8 h4{
+    margin-left: 10px;
+}
+
+.left-data-table,.right-data-table{
+    float: left;
+    height: auto;
+}
+
+.left-data-table{
+    width: 48%;
+    margin-right: 24.1px;
+    margin-left: 11px;
+}
+
+.interest-rate{
+    padding: 11px;
+    background-color: #44A0F3;
+    height: 98px;
+    width: 277px;
+    color: #ffffff;
+    border-radius: 4px;
+}
+.interest-rate span{
+    font-size: 21px;
+    padding: 11px;
+}
+.interest-rate p{
+    font-size: 19px;
+    padding: 11px;
+}
+.interest-rate hr{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.third-container{
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: -13px;
+    margin-bottom: 7px;
+}
+
+.info{
+    color: red;
+    float: right;
+    margin-top: -4px;
+}
+
+.foutstyle{
+    width: 45px;
+    border-radius: 3px;
+    border-color: skyblue;
+    height: 30px;
+    background-color: #39BCE7;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tbody tr:hover{
+    background-color: #b2bbc5;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.right-data-table{
+    width: 48%;
+}
+
+.table thead{
+    background-color: #eef0f3;
+}
+
+.table tbody tr:last-child{
+    font-weight: bold;
+}
+
+.selected-row{
+    background-color: #e84c3d;
+    color: #ffffff;
+}
+
+.chart-division{
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    height: 403px;
+}
+
+.foutstyle{
+    width: 45px;
+    border-radius: 3px;
+    border-color: skyblue;
+    height: 30px;
+    background-color: #39BCE7;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+.clear{
+    clear: both;
+}
+
+/*media queries*/
+
+@media (min-width: 1200px) {
+
+    .col-md-4,.col-lg-8{
+        min-height: 800px;
+        background-color: #2a3542;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    #mainContainer{
+        width: 98%;
+    }
+
+    .col-md-4,.col-lg-8{
+        min-height: 100px;
+        height: auto;
+    }
+
+}
+
+
+@media (min-width: 321px) and (max-width: 768px) {
+    #mainContainer{
+        width: 98%;
+    }
+
+    .left-data-table,.right-data-table{
+        width: 98%;
+    }
+}
