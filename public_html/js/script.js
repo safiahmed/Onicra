@@ -26,8 +26,6 @@ $(document).ready(function() {
 //    edit and update code ends here
 
 
-
-
 })
 
 //this function to calculate values of both source and application of funds
@@ -92,11 +90,44 @@ function calculatevalues() {
     var FI = FR / t1last
     var FO = FI.toFixed(2);
     if (FO > 0) {
-        $(".interest-rate p").text(FO + "%")
+        $(".interest-rate p span").text(FO + "%")
+        $(".interest-rate p label").text("Up By")
     } else {
-        $(".interest-rate p").text("-"+FO + "%")
+        $(".interest-rate p span").text(FO + "%")
+        $(".interest-rate p label").text("Down By")
     }
     //    calculation of interest rate s ends here
+
+    //this function is for highlighting the highest interest value
+    highlightRow()
+}
+
+function highlightRow() {
+    var max = 0
+    var row = 0
+    $(".val").each(function() {
+        $(this).parent("tr").removeClass("selected-row")
+        var $this = parseFloat($(this).text())
+        if ($this > max) {
+            max = $this;
+            row = $(this).attr("id")
+        }
+    })
+    $("#" + row).parent("tr").addClass("selected-row")
+
+
+    var maxi = 0
+    var rowi = 0
+    $(".val1").each(function() {
+        $(this).parent("tr").removeClass("selected-row")
+        var $thisi = parseFloat($(this).text())
+        if ($thisi > maxi) {
+            maxi = $thisi;
+            rowi = $(this).attr("id")
+        }
+    })
+    $("#" + rowi).parent("tr").addClass("selected-row")
+
 }
 
 function chartdata() {
@@ -118,13 +149,13 @@ function chartdata() {
         labels: ["Terms Loan", "Owners Equity", "Working Capital", "Over Draft", "Inventory Funding", "Cash Credit", "Other"],
         datasets: [
             {
-                fillColor: "rgba(220,220,220,0.5)",
-                strokeColor: "rgba(220,220,220,1)",
+                fillColor: "rgba(80,171,252,0.5)",
+                strokeColor: "rgba(80,171,252,1)",
                 data: data1
             },
             {
-                fillColor: "rgba(151,187,205,0.5)",
-                strokeColor: "rgba(151,187,205,1)",
+                fillColor: "rgba(35,130,212,0.5)",
+                strokeColor: "rgba(35,130,212,1)",
                 data: data2
             }
         ]
@@ -147,8 +178,8 @@ function chartdatasecond() {
         labels: ["Fixed Assets", "Investments", "Receivables", "Inventory help-up cost", "Cash In Hand", "Cash In Bank", "Other Assets"],
         datasets: [
             {
-                fillColor: "rgba(220,220,220,0.5)",
-                strokeColor: "rgba(220,220,220,1)",
+                fillColor: "rgba(20,156,128,0.5)",
+                strokeColor: "rgba(20,156,128,1)",
                 data: data3
             }
         ]

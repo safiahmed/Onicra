@@ -18,7 +18,6 @@
     margin: 0 auto;
     margin-top: 2px;
     margin-left: 11px;
-    margin-bottom: 15px
 }
 
 .data-tables{
@@ -42,19 +41,19 @@
 }
 
 .interest-rate{
-    padding: 11px;
+    padding: 9px;
     background-color: #44A0F3;
-    height: 123px;
+    height: 102px;
     width: 293px;
     color: #ffffff;
     border-radius: 4px;
 }
 .interest-rate span{
-    font-size: 23px;
-    padding: 11px;
+    font-size: 18px;
+    padding: 1px;
 }
-.interest-rate p{
-    font-size: 48px;
+.interest-rate p span{
+    font-size: 39px;
     padding: 5px;
 }
 .interest-rate hr{
@@ -62,19 +61,34 @@
     margin-bottom: 0;
 }
 
+.interest-rate p label{
+    font-weight: normal;
+    font-size: 21px;
+}
+
 .third-container{
-    padding: 24px;
+    padding: 13px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin-top: 21px;
+    margin-top: 10px;
     margin-bottom: 7px;
-    height: auto;
+}
+
+.table-container{
+    margin-top: 10px;
+}
+
+.table-container p{
+    margin-bottom: 0;
+}
+
+.table1{
+    margin-bottom: 2px
 }
 
 .info{
     color: red;
     float: right;
-    margin-top: -13px;
     margin-bottom: 7px;
     font-weight: bold;
 }
@@ -107,6 +121,10 @@ tbody tr:hover{
     font-weight: bold;
 }
 
+.table>tbody>tr>td{
+    padding: 5px;
+}
+
 .selected-row{
     background-color: #e84c3d;
     color: #ffffff;
@@ -115,7 +133,8 @@ tbody tr:hover{
 .chart-division{
     border: 1px solid #ddd;
     border-radius: 3px;
-    height: 403px;
+    height: 303px;
+    margin-top: 5px;
 }
 
 .foutstyle{
@@ -128,6 +147,12 @@ tbody tr:hover{
     font-weight: bold;
 }
 
+.footer{
+    background-color: darkgrey;
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
 
 .clear{
     clear: both;
@@ -138,7 +163,7 @@ tbody tr:hover{
 @media (min-width: 1200px) {
 
     .col-md-4,.col-lg-8{
-        min-height: 800px;
+        min-height: 831px;
         background-color: #2a3542;
     }
 
