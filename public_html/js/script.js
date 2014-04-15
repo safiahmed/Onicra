@@ -11,6 +11,7 @@ $(document).ready(function() {
         if (inptval != '' && (inptval[inptval.length - 1] === "%" || !isNaN(inptval))) {
             $(this).html('<input type="text" value="' + inptval + '" class = "fout" title = "Please Enter After Edit"/>')
             $(".fout").addClass('foutstyle')
+            $(".fout").focus()
         }
     })
     $("body").on('keypress', '.fout', function(e) {
@@ -23,6 +24,15 @@ $(document).ready(function() {
             chartdata()
         }
     })
+
+//    $("body").on("focusout",".fout",function(){
+//        var val = parseFloat($(this).val())
+//        $(this).parent("td").text(val)
+//    })
+
+
+
+
 //    edit and update code ends here
 
 
@@ -52,6 +62,7 @@ function calculatevalues() {
         }
         i++
     })
+
     $(".table1 tbody tr:last").children("td:eq(1)").text(subtotal)
 
 //for total in application fund
@@ -78,6 +89,7 @@ function calculatevalues() {
         }
         k++
     })
+    var subtotal1 = subtotal1.toFixed(2);
     $(".table1 tbody tr:last").children("td:eq(3)").text(subtotal1)
 
     //    calculation of interest rate s starts here
@@ -107,7 +119,8 @@ function highlightRow() {
     var row = 0
     $(".val").each(function() {
         $(this).parent("tr").removeClass("selected-row")
-        var $this = parseFloat($(this).text())
+        var txt = $(this).text()
+        var $this = parseFloat(txt)
         if ($this > max) {
             max = $this;
             row = $(this).attr("id")
